@@ -1,0 +1,198 @@
+\providecommand{\main}{../../main}
+\providecommand{\figpath}[1]{\main/../lessons/#1}
+\documentclass[../../main/main.tex]{subfiles}
+
+\newdate{date}{18}{03}{2019}
+
+
+\begin{document}
+
+\chapter{Detectors for Particle Physics}
+
+\marginpar{ \textbf{Lecture 4.} \\  \displaydate{date}. \\ Compiled:  \today.}
+
+\section{Recap: interaction of particles with matter}
+The way we identify particles is through their interaction with matter. So, we can detect:
+\begin{itemize}
+    \item Charged particles based on ionization, breamsstrahlung, Cherenkov.
+    \item \( \gamma \)-rays based on photo/compton effect, pair production.
+    \item Neutrons based on strong interaction.
+    \item Neutrinos based on weak interaction.
+\end{itemize}
+We will give only a phenomenological treatment since the goal is to be able to understand the implications for detector design.
+
+\subsection{Ionization}
+The equation that describe this interaction is the \textbf{Bethe-Bloch Equation}
+\begin{equation}
+    - \left\langle \dv{E}{x} \right\rangle
+    =
+    K \rho \frac{Z}{A} \frac{z^2}{\beta^2}
+    \qty[ \frac{1}{2} \log \frac{2 m_e c^2 \beta^2 \gamma^2 T_\mathrm{max}}{I^2} - \beta^2 - \frac{\delta(\beta \gamma)}{2} - \frac{C}{z} ]
+    \label{eq:}
+\end{equation}
+%TODO table with meanings
+%TODO add image with plot
+
+\subsection{Breamsstrahlung}
+\begin{equation}
+    - \left\langle \dv{E}{x} \right\rangle
+    =
+    \frac{E}{X_0}
+    \label{eq:}
+\end{equation}
+where \( X_0 \) is the radiation length in \( [\si{g/cm^2}] \) and its expression (approximation) is:
+\begin{equation}
+    X_0
+    =
+    \frac{A}{4 \alpha N_A Z^2 r^2_e \log \frac{183}{Z^{\frac{1}{3}}}}
+    \label{eq:}
+\end{equation}
+After the passage of one \( X_0 \), electron has lost all but \( \qty(1/e)^\text{th} \) of its energy, namely 63\%.
+
+The critical energy \( E_C \) is the energy for which:
+\begin{equation}
+    \qty(\dv{E}{x})_\mathrm{ion}
+    =
+    \qty(\dv{E}{x})_\mathrm{rad}
+    \label{eq:}
+\end{equation}
+An approximation is:
+\begin{equation}
+    E_C
+    \approx
+    \frac{600 \ \si{MeV}}{Z}
+    \label{eq:}
+\end{equation}
+
+
+
+\subsection{Total energy loss for electrons}
+Ionization losses decrease logarithmically with \( E \) and increase linearly with \( Z \). Bremsstrahlung increases approximately linearly with \( E \) and is the dominant process at high energies.
+%TODO add plots
+
+
+
+\subsection{Interaction of photon with the matter}
+Photon lose energy by:
+\begin{itemize}
+    \item Photoelectric effect on atoms at low energy.
+    \item Compton effect important at intermediate range.
+    \item Pair production.
+\end{itemize}
+In our case pair production is dominant:
+\begin{equation}
+    \sigma_\mathrm{pair}
+    =
+    \frac{7}{9} \frac{N_A}{A} \frac{1}{X_0}
+    \label{eq:}
+\end{equation}
+%TODO add plots
+
+
+
+
+
+\section{Detectors: gaseous, scintillators and }
+
+\subsection{Ionization in gas detectors}
+Primary ionization:
+\begin{equation}
+    \text{Particle} + X \longrightarrow X^+ + e^- + \text{Particle}
+    \label{eq:}
+\end{equation}
+Secondary ionization:
+\begin{equation}
+    X + e^- \longrightarrow X^+ + e^- + e^-
+    \label{eq:}
+\end{equation}
+The relevant parameters to evaluate the number of particles produced are the ionization energy \( E_i \), the average energy/ion pair \( W_i \) and the average number of ion pairs (per cm) \( n_T \).  In particular:
+\begin{equation}
+    \left\langle n_T \right\rangle
+    =
+    \frac{L \left\langle \dv{E}{x} \right\rangle}{W_i}
+    \label{eq:}
+\end{equation}
+with \( L \) the thickness of the material. Typical values for \( E_i \) are
+%TODO
+
+Concerning the diffusion, it is significantly modified by the presence of a magnetic field, with transverse and longitudinal orientation depending on it. By measuring the bending of the particle, we are able to infer the momentum of the particle itself. The electric field influences only the longitudinal diffusion and not the transverse diffusion.
+
+The electrons can undergo to a multiplication process called townsend avalanche. Given the number of electrons at the position \( x \), \( n(x) = n_0 e^{\alpha x} \), we have the gain:
+\begin{equation}
+    G
+    =
+    \frac{n(x)}{n_0}
+    =
+    e^{\alpha x}
+    \label{eq:}
+\end{equation}
+where \( \alpha \) can depend on x.
+
+There are four regions of work:
+\begin{itemize}
+    \item Geiger-Muller coun
+    %TODO
+\end{itemize}
+
+
+
+\subsection{Multiwire proportional chambers}
+Signal generations: electron drift to closest wire, gas amplification near wire that creates avalanche
+%TODO
+
+
+
+\subsection{Drift chambers}
+In this case we can have two dimensional informations through time measurments, namely drift time measurement. It starts by an external detector such as a scintillator counter. Electrons drift to the anode in the field created by anode and cathode. The electron arrival at the anode stops in the time measurement.
+\begin{equation}
+    x
+    =
+    \int_{0}^{t_D} v_D \d{t}
+    \label{eq:}
+\end{equation}
+We build the detector with a known drift velocity. We can introduce field wires
+%TODO
+
+
+
+\subsection{Semiconductor detectors}
+Semiconductor detectors have the following characteristics:
+\begin{itemize}
+    \item High density (respect to gas detectors), so large energy loss in a short distance
+    \item A small diffusion effect, so position resolution of less than \( 10 \ \si{\mu m} \)
+    \item Low ionization energy, so it is easier to produce particles.
+\end{itemize}
+
+The materials employed for their construction are:
+\begin{itemize}
+    \item Germanium, which needs to be operated at a very low temperature (\( 77 \ \si{K} \)) due to small band gap.
+    \item Silicon, which can operate at room temperature.
+    \item Diamond, resistent to very hard radiations, low signal and high cost.
+\end{itemize}
+
+Silicon detectors are based on a p-n junction with reverse bias applied to enlarge the depletion region. The potential barrier becomes higher so that the diffusion across the junction is suppressed and the current across the junction is very small (``leakage current'').
+%TODO add images
+
+Such a detector can be built in strips. By segmenting the implant we can reconstruct the position of hte transversing particle in one dimension. We have a higher field close to the collecting electrodes where most of the signal is induced. Strips can be read with dedicated electronics to minimize the noise. To have 2-dimensional measurements, double sided silicon detector are used. A type of silicon detector still in development is the pixel detector (for 3-dimensional measurements).
+
+Noise contributions can be leakage current and electronics readout.
+
+Position resolution is the spread of the reconstructed position minus the true position. For example:
+\begin{align}
+    \sigma &= \frac{\text{pitch}}{\sqrt{12}}       & \text{One strip cluster}&&&& \\
+    \sigma &= \frac{\text{pitch}}{1.5 \frac{S}{N}} & \text{Two strip cluster}&&&&
+\end{align}
+
+
+
+
+
+\section{Track reconstruction}
+Track reconstruction is used to determine momentum of charged particles by measuring the bending of a particle trajectory in a magnetic field
+
+
+
+
+
+
+\end{document}

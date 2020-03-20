@@ -1,0 +1,216 @@
+\providecommand{\main}{../../main}
+\providecommand{\figpath}[1]{\main/../lessons/#1}
+\documentclass[../../main/main.tex]{subfiles}
+
+\newdate{date}{17}{03}{2020}
+
+
+\begin{document}
+
+\marginpar{ \textbf{Lecture 3.} \\  \displaydate{date}. \\ Compiled:  \today. \\ Prof. Lucchesi}
+
+Today we are going to complete the review of the fundamental constituent of the matter and we will introduce the tools to perform the needed calculations needed to understand the topics.
+
+\section{Leptons}
+The leptons are fundamental particles and we have:
+\begin{itemize}
+    \item \textbf{Electron \( e \)}.\\
+        It was discovered by J.J. Thomson in 1897 while studying the properties of cathode rays.
+    \item \textbf{Muon \( \mu \)}.\\
+        It was discovered by Carl D. Anderson and Seth Neddermeyer in 1936 as component of the cosmic rays. At the beginning iy was thought to be the Yukawa particle, the mediator of the strong force. Then Conversi, Pancini and Piccioni demonstrated it does not interact strongly.
+    \item \textbf{Tauon \( \tau \)}.\\
+        It was discovered by a group led by Martin Perl at Stanford Linear Accelerator Center. They used \( e^+e^- \) collisions with final states events \( e\mu \).
+    \item \textbf{Neutrino \( \nu \)}.\\
+        Neutrino hypothesis was formulated by Pauli to explain the \( \beta \)-decay. It was discovered by Clyde Cowan and Fred Reines in the 1953. We don't know if mass is given to neutrinos through the same mechanism (Higgs mechanism) for the other particles or if there is something that does it we still don't know.
+\end{itemize}
+
+
+
+\subsection{Light mesons}
+The lightest strongly interacting particles are the \( \pi \) mesons. Their history is the beginning of particle physics. In 1947 Lattes, Occhialini and Powell demonstrated the existence of \( \pi^{\pm} \longrightarrow \mu^{\pm} + \nu \).
+
+Strange particles were discovered first in cosmic ray experiments, later in experiments at particle accelerators. New quatum numbers, the \textbf{strangeness}, is introduced to describe the production and decay processes.
+
+The eightfold model was introduced to explain the structure of hadrons known until 1970'
+% TODO image of eightfold model
+
+Mesons are \( q \bar{q} \) states. There are pseudoscalar mesons and vector mesons. Baryons are \( qqq \) states
+
+
+
+
+
+
+
+
+
+
+\chapter{Tools for calculations}
+
+\section{Cross Section}
+The oservables we want to use in our case are:
+
+\( A \): unstable particle.\\
+\begin{equation}
+    \dv{P(t)}{t} = - \frac{P}{\tau_A}
+    \Longrightarrow
+    P(t) = P_0 e^{-\frac{t}{\tau_A}}
+    \label{eq:}
+\end{equation}
+\begin{equation}
+    \tau_A = \frac{1}{\Gamma_A}
+    \qquad
+    \Gamma_A = \text{Total width of the state } A
+    \label{eq:}
+\end{equation}
+\( \Gamma(A\longrightarrow f) \) is the partial width.
+\begin{equation}
+    \Gamma_A = \sum_{f} \Gamma(A \longrightarrow f)
+    \label{eq:}
+\end{equation}
+\begin{equation}
+    \frac{\Gamma(A \longrightarrow f)}{\Gamma_A}
+    =
+    \text{Branching ration}
+    \label{eq:}
+\end{equation}
+
+Let's introduce the \textbf{cross section}. Imagine we have a fixed target experiment. We have a beam of particles \( A \), with density \( n_A \), velocity \( v_A \), and a target \( B \). In this case we measure the rate, which is:
+\begin{equation}
+    \text{Rate}
+    =
+    \frac{\text{Number of events}}{\text{Time}}
+    =
+    n_A v_A \sigma_i
+    \label{eq:}
+\end{equation}
+with \( \sigma_i \) the cross section of the process, which has the dimension of an area and it is measured in barn (\(10^{-28} \ \si{m^2} \)). Another important quantity is the \textbf{luminosity}, i.e.:
+\begin{equation}
+    \mathcal{L} = \frac{R}{\sigma_i}
+    \label{eq:}
+\end{equation}
+
+In beam collisions we have two beams. For the first beam we have \( n_A, v_A \), for the second beam \( n_B, v_B \). The idea is that the second beam is the target, so we consider \( N_B = n_B l_B A_B \) in order to calculate the rate:
+\begin{equation}
+    R = n_A n_B l_B A_B \abs{v_A - v_B} \sigma_i
+    \label{eq:}
+\end{equation}
+
+The beam is composed of bunches with gaussian distributuion:
+\begin{equation}
+    \dv{N}{s} = \frac{N}{2\pi \sigma_x \sigma_y} e^{-\qty(\frac{x^2}{2 \sigma_x^2} + \frac{y^2}{2 \sigma_y^2}) }
+    \label{eq:}
+\end{equation}
+The number of interations per bunch is \( N_mathrm{int} = \sigma_\mathrm{int} \frac{N_1 N_2}{4\pi \sigma_x \sigma_y} \). The bunch frequency is \( f \). The rate is:
+\begin{equation}
+    R_i = N_\mathrm{int} f = \sigma_\mathrm{int} \frac{N_1 N_2}{4\pi \sigma_x \sigma_y}
+    \label{eq:}
+\end{equation}
+% TODO luminosity
+
+\section{Partial Width}
+The partial width and the cross section for a certain process can be calculated through \textbf{Fermi's Golden Rule} in a very practical way. By using the time evolution operator \( T \):
+\begin{equation}
+    \bra{1,2,\dots,n} T \ket{A(p_A)}
+    =
+    \underbrace{\mathcal{M}(A \longrightarrow 1,2,\dots,n)}_{\text{Invariant matrix element}} \qty(2\pi)^4 \underbrace{\delta^4 \qty(p_A - \sum_{i=1}^{n} p_i )}_{E, \va{p} \ \text{conservation}}
+    \label{eq:}
+\end{equation}
+To evaluate the full cross section, we need to do very difficult integrals over the phase space:
+\begin{equation}
+    \int_{}^{} \d{\pi_{u}}
+    =
+    \int_{}^{} \frac{\d{^3 p_1}}{(2\pi)^3 2 E_1} \dots \frac{\d{^3 p_n}}{(2\pi)^3 2 E_n} (2\pi)^4 \delta^4 \qty(p_A - \sum_{i=1}^{n} p_i )
+    \label{eq:}
+\end{equation}
+However, we also need to normalize:
+\begin{equation}
+    \ket{A} \longrightarrow \frac{1}{2 E_A} \qquad \text{Initial state}
+    \label{eq:}
+\end{equation}
+\begin{equation}
+    \Gamma(A \longrightarrow f)
+    =
+    \frac{1}{M_A} \int_{}^{} \d{\pi_u} \abs{\mathcal{M}(A \longrightarrow f)}^2
+    \label{eq:}
+\end{equation}
+
+For the cross section:
+%TODO check if it is correct
+\begin{equation}
+    \sigma(A + B \longrightarrow f)
+    =
+    \frac{1}{2 E_A E_B (v_A - v_B)} \int_{}^{} \d{\pi_u} \abs{\mathcal{M}(A + B \longrightarrow f)}^2 (??????)
+    \label{eq:}
+\end{equation}
+
+We will procede with a couple of examples/exercises.
+\begin{example}{Phase space of 2 particles}{}
+    \begin{equation}
+        \int_{}^{} \d{\pi_2}
+        =
+        \int_{}^{} \frac{\d{^3 p_1}}{(2\pi)^3 2 E_1} \frac{\d{^3 p_2}}{(2\pi)^3 2 E_2} (2\pi)^4 \delta^4 \qty(p - p_1 - p_2 )
+        \label{eq:}
+    \end{equation}
+
+    Let's work in the CM system. We have to integrate over \( \va{p}_2 \) and exploit the properties of \( \delta \) function:
+    \begin{equation}
+        \int_{}^{} \d{\pi_2}
+        =
+        \int_{}^{} \frac{p \d{\Omega}}{16 \pi^2 (E_1 + E_2)}
+        \longrightarrow
+        \frac{2p}{E_\mathrm{CM}} \frac{1}{8\pi} \int_{}^{} \frac{\d{\Omega}}{4\pi}
+        \label{eq:}
+    \end{equation}
+
+    We can describe the resonance through the Breit-Wigner formula:
+    \begin{equation}
+        \mathcal{M}
+        \sim
+        \frac{1}{E - E_\mathrm{R} + \frac{i}{2} \Gamma}
+        \label{eq:}
+    \end{equation}
+    where \( E_\mathrm{R} \) is the energy of the resonance and \( \Gamma \) is the width. In the case of resonance in the invariant mass, we have to slightly modify it:
+    \begin{equation}
+        \mathcal{M}
+        \sim
+        \frac{1}{p^2 - m_\mathrm{R} + i m_\mathrm{R}\Gamma_\mathrm{R}}
+        \label{eq:}
+    \end{equation}
+\end{example}
+
+\begin{example}{\( \pi^+\pi^- \longrightarrow \rho^0 \longrightarrow \pi^+\pi^- \)}{}
+    The final distributions of the particles are not in agreement with what we expect from the phase space distributions for two particles. In this case we can do the calculation in an easy way by studying:
+    \begin{enumerate}
+        \item \( \pi^+\pi^- \longrightarrow \rho^0 \) and treat it as a stable particle
+        \item Use Feynman diagrams:
+    \end{enumerate}
+
+    \begin{equation}
+        \sigma(\pi^+\pi^- \longrightarrow \rho^0)
+        =
+        \frac{1}{2 E_A 2 E_B \abs{v_A - v_B}} \int_{}^{} \frac{\d{^3p_C}}{(2\pi)^3 2 E_C} \abs{\mathcal{M}}^2 (2 \pi)^4 \delta^4(p_C - p_A - p_B)
+        \label{eq:}
+    \end{equation}
+    where \( A = \pi^+ \), \( B = \pi^- \) and \( C = \rho^0 \).
+
+    \begin{equation}
+        \Gamma_{\rho}
+        =
+        \frac{1}{2 m_{\rho}} \int_{}^{} \d{\pi_2} \abs{\mathcal{M}}^2
+        \label{eq:}
+    \end{equation}
+    \begin{equation}
+        \sigma(\pi^+\pi^- \longrightarrow \rho^0 \longrightarrow \pi^+\pi^-)
+        =
+        \frac{1}{2m_{\rho}} \frac{1}{8\pi} \frac{2p}{m_{\rho}} \int_{}^{} \frac{\d{\Omega}}{4\pi} \frac{1}{(E^2_\mathrm{CM} - m^2_p)^2 - m^2_p \Gamma^2_{\rho}} \abs{k}^2
+        \label{eq:}
+    \end{equation}
+    where \( k \) is a part related to the spin of \( \rho \).
+
+    We see a resonance and we are able to fit the data, so we can get the quantities we want to know as fit results parameters.
+\end{example}
+
+
+
+\end{document}
