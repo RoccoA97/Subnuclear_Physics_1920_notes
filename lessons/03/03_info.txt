@@ -24,6 +24,7 @@
 		L03_BWFFT	=	Breit-Wigner Formula Fourier Transformed
 		L03_BWFPD	=	Breit-Wigner Formula Probability Decay
 		L03_BWFL	=	Breit-Wigner Formula Lifetime
+		L03_PPRCS	=	Pion Pion Rho Cross Section
 		L03_PPRPPCS	=	Pion Pion Rho Pion Pion Cross Section
 		L03_RPW		=	Rho Partial Width
 
