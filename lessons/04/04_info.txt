@@ -1,0 +1,13 @@
++ Arguments:
+    ++
+
++ Labels:
+    ++ Equations (eq:):
+		L04_BBF		=	Bethe-Bloch Formula
+		L04_RLA		=	Radiation Length Approximation
+
+    ++ Figures (fig:):
+		L04_BBFP	=	Bethe-Bloch Formula Plot
+
+	++ Tables (tab:):
+		L04_BBFS	=	Bethe-Bloch Formula Symbols

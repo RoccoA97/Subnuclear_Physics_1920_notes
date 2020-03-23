@@ -28,7 +28,6 @@
 		L03_PPRPPCS	=	Pion Pion Rho Pion Pion Cross Section
 		L03_RPW		=	Rho Partial Width
 
-
     ++ Figures (fig:):
 		L03_PVM		=	Pseudoscalar - Vector Mesons (Tikz)
 		L03_PPRPPD	=	Pion Pion Rho Pion Pion Diagram (Tikz)
