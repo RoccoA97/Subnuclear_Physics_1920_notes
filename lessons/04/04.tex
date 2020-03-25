@@ -69,52 +69,43 @@ The Bethe-Bloch formula is valid for particles much heavier than the electron. F
     \frac{A}{4 \alpha N_A Z^2 r^2_e \log \frac{183}{Z^{\frac{1}{3}}}}
     \label{eq:L04_RLA}
 \end{equation}
-After the passage of one \( X_0 \), electron has lost all but \( \qty(1/e)^\text{th} \) of its energy, namely 63\%.
-
-The critical energy \( E_C \) is the energy for which:
+Moreover, there exists a point in which the loss of energy due to ionization and the loss of eergy due to breamsstrahlung are equal. This point is called\textbf{critical energy} \( E_\mathrm{c} \) and a relatively good approximation of its value is:
 \begin{equation}
-    \qty(\dv{E}{x})_\mathrm{ion}
-    =
-    \qty(\dv{E}{x})_\mathrm{rad}
-    \label{eq:}
-\end{equation}
-An approximation is:
-\begin{equation}
-    E_C
+    E_\mathrm{c}
     \approx
     \frac{600 \ \si{MeV}}{Z}
-    \label{eq:}
+    \label{eq:L04_CEA}
 \end{equation}
 
-
-
-\subsection{Total energy loss for electrons}
-Ionization losses decrease logarithmically with \( E \) and increase linearly with \( Z \). Bremsstrahlung increases approximately linearly with \( E \) and is the dominant process at high energies.
+\marginpar{Energy loss as a function of other parameters}
+Concerning the trend of these losses, we find that the ionization loss decreases logarithmically with \( E \) and increases linearly with \( Z \), while bremsstrahlung loss increases approximately linearly with \( E \) and it is the dominant process at high energies.
 %TODO add plots
 
 
 
 \subsection{Interaction of photon with the matter}
-Photon lose energy by:
+Photons can lose energy in several ways. The possibilities are:
 \begin{itemize}
     \item Photoelectric effect on atoms at low energy.
-    \item Compton effect important at intermediate range.
-    \item Pair production.
+    \item Compton effect, which is important at medium range energies.
+    \item Pair production, which is the dominant process at higher energies.
 \end{itemize}
-In our case pair production is dominant:
+It goes without saying that we will focus on pair production, since we are discussing topics whose energies are relatively high. Concerning the cross section of this process, it is approximated by:
 \begin{equation}
     \sigma_\mathrm{pair}
     =
     \frac{7}{9} \frac{N_A}{A} \frac{1}{X_0}
-    \label{eq:}
+    \label{eq:L04_PPCS}
 \end{equation}
 %TODO add plots
 
+We can characterize a certain material by defining the \textbf{attenuation length} \( \lambda \), namely the length for which the beam of photons inside the material is attenuated by a factor \( \frac{1}{e} \), and it is linked to the radiation length by \( \lambda = \frac{9}{7} X_0 \).
 
 
 
 
-\section{Detectors: gaseous, scintillators and }
+
+\section{Gaseous, scintillator and solid state detectors}
 
 \subsection{Ionization in gas detectors}
 Primary ionization:

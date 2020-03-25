@@ -1,0 +1,172 @@
+\providecommand{\main}{../../main}
+\providecommand{\figpath}[1]{\main/../lessons/#1}
+\documentclass[../../main/main.tex]{subfiles}
+
+\newdate{date}{24}{03}{2019}
+
+
+\begin{document}
+
+\section{Calorimetry}
+\marginpar{ \textbf{Lecture 5.} \\  \displaydate{date}. \\ Compiled:  \today.}
+
+A calorimeter is a block of matter which intercept the primary particle and is of sufficient t
+%TODO
+
+Main characteristics:
+\begin{itemize}
+	\item They are sensitive to charged and neutral particles
+	\item The shower development is a statistical process and the number of secondary particles \( \left\langle N \right\rangle \) is proportional to the energy \( E \) of the incident particle.
+	\item The length of the detector scales logarithmically with the particle energy \( E \), whereas for a magnetic spectrometer the size scales with momentum \( p \) as \( p^{\frac{1}{2}} \).
+	\item Through the use of segmented detectors the information of the shower development allows precise measurements of the position and angle of the incident particle.
+	\item The different response of materials to electrons,
+
+\end{itemize}
+
+\subsection{Electromagnetic shower development}
+Theory of em shower development is relatively simple. It starts with particles with \( E_0 \) greater that few MeV. For electrons, the loss of energy is dominated by Bremsstrahlung, for photons by pair production.
+
+A simplified shower model in homogeneous detector has the following assumptions: we assume a material with radiation length of \( X_0 \) and we suppose to have \( 2^t \) particles after \( t X_0 \) radiation lengths, each with energy \( \frac{E}{2^t} \). So the shower stops when \( E < E_C \), the number of particles generated is:
+\begin{equation}
+	N_\mathrm{max}
+	=
+	2^{t_\mathrm{max}}
+	=
+	\frac{E_0}{E_C}
+	\label{eq:}
+\end{equation}
+The maximum of the shower is obtained at:
+\begin{equation}
+	t_\mathrm{max}
+	\propto
+	\log \qty(\frac{E_0}{E_C})
+	\label{eq:}
+\end{equation}
+The later development of the shower is described by the Moliere Radius:
+\begin{equation}
+	R_M
+	\approx
+	(21 \ \si{MeV}) \frac{X_0}{E_C}
+	\label{eq:}
+\end{equation}
+
+%TODO
+Longitudinal electromagnetic shower develompment (add plot). Energy deposited by electrons in a block of copper. Transversally, the 95\% of the energy of shower is contained in a cone of radius \( R \sim 2R_M \). (Add plot of moliere radii).
+
+
+
+
+
+\subsection{Hadronic shower development}
+Showers generated and developed by hadrons are dominated by the strong interaction, characterized by the nuclear interaction length \( \lambda_\mathrm{int} \). We have for energies up to \( 100 \ \si{GeV} \):
+\begin{equation}
+	\lambda_\mathrm{int}
+	\sim
+	A^{\frac{1}{3}}
+	\label{eq:}
+\end{equation}
+
+This interaction is responsible for:
+\begin{itemize}
+	\item The production of hadronic shower particles, of which \( \sim \) 90\% are pions. The neutral pions decay in 2 \( \gamma \)s, which develop an electromagnetic component in the shower. The fraction of this component depend on the energy of the initial particle.
+	\item Invisible energy: the energy needed to break the nuclear bind is provided by the initial particle and it does not contribute to the calorimeter signal.
+\end{itemize}
+So we get in function of the distance travelled inside the calorimeter:
+\begin{equation}
+	N(x)
+	=
+	N_0 e^{-\frac{x}{\lambda_\mathrm{int}}}
+	\label{eq:}
+\end{equation}
+
+%TODO plot of average fraction contained
+
+The consequences of the nuclear interactions properties are:
+\begin{itemize}
+	\item The calorimeter signals for hadrons are in general smaller than for electrons of the same energy because of the invisible energy.
+	\item The calorimeter is non-linear for hadron detection due to the dependence of the electromagnetic fraction on energy.
+\end{itemize}
+
+There are two types of calorimeters:
+\begin{itemize}
+	\item Homogeneous calorimeter, in which the absorber and the active (signal producing) medium are one and the same. Used to get high precision
+	\item Sampling calorimeter, in which these two roles are played by different media. These are layers of active material and high density absorber. This type of calorimeter is more common.
+\end{itemize}
+
+The calorimeter response is defined as the average calorimeter signal per unit of deposited energy. Electromagnetic calorimeters are in general linear, since all the energy is deposited through processes that may generate signals. Non-linearity is usually an indication of instrumental problems, such as signal saturation or shower leakage.
+
+Calorimeters are based on physical processes that are inherently statistical in nature, the precision of calorimetric measurements is determined and limited by fluctuations. We examine here the fluctuations that may affect the energy resolution. Many of them will affect electromagnetic and hadronic calorimeter, the last one has additional to be discussed later. Fluctuations and contributions to the \( E \) resolution are:
+\begin{itemize}
+	\item Signal, sampling fluctuations:
+		\begin{equation}
+			\frac{\sigma_E}{E}
+			\sim
+			\frac{1}{\sqrt{E}}
+			\label{eq:}
+		\end{equation}
+
+	\item Shower leakage fluctuations:
+		\begin{equation}
+			\frac{\sigma_E}{E}
+			\sim
+			\frac{1}{\sqrt[4]{E}}
+			\label{eq:}
+		\end{equation}
+
+	\item Fluctuations resulting from instrumental effects: electronic noise, signal collection, structural non-uniformities, etc...
+		\begin{equation}
+			\frac{\sigma_E}{E}
+			\sim
+			\frac{1}{E}
+			\label{eq:}
+		\end{equation}
+
+	\item Sampling fluctuations:
+		\begin{equation}
+			\frac{\sigma_E}{E}
+			\sim
+			\text{const}
+			\label{eq:}
+		\end{equation}
+\end{itemize}
+
+The calorimeter energy resolution has contribution from different fluctuations processes which add in quadrature:
+\begin{equation}
+	\sigma_T^2
+	=
+	\sigma_1^2 + \sigma_2^2 + \dots + \sigma_n^2
+	\label{eq:}
+\end{equation}
+The major contributions to the energy resolution can be summarized:
+\begin{equation}
+	\frac{\sigma}{E}
+	=
+	\frac{a}{\sqrt{E}} \oplus b \oplus \frac{c}{E}
+	\label{eq:}
+\end{equation}
+with \( a \) the stochastic term (due to intrinsic shower fluctuations, ...), \( b \) the constant term, \( c \) the noise term.
+
+For hadronic showers, we have some types of fluctuations as in electromagnetic showers, and in addition:
+\begin{itemize}
+	\item Fluctuations in visible energy, irreducible contribution, not possible to improve beyond this limit.
+	\item Fluctuations in the electromagnetic shower fraction that cause differences between \( p \), \( \pi \) induced showers since in \( p \) showers there are no \( \pi^0 \).
+\end{itemize}
+%TODO add plot of p and pion distributions
+In the case of hadron calorimeter, the relation used before does not describe the energy resolution due to the two additional effects. For the major part of calorimeters energy resolution can be approximated by:
+\begin{equation}
+	\frac{\sigma}{E}
+	=
+	\frac{a}{\sqrt{E}} + b
+	\label{eq:}
+\end{equation}
+where \( a \) can reach values of 90\% and \( b \) can be around few \%. Therefore, why do we build hadronic calorimeters? In HEP experiments we do not measure single hadrons, we do not reconstruct \( p \), \( \pi \), etc.. We reconstruct jets! Jet reconstruction is complex and %TODO
+
+
+
+\subsection{Particle identification}
+Short lived particles are identified through the resonance. Stable or long lived particles are identified exploiting time of flight, Cerenkov, energy loss, conmbination of tracking and calorimeter.
+%TODO add calculations
+
+
+
+\end{document}

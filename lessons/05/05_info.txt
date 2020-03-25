@@ -1,0 +1,9 @@
++ Arguments:
+    ++
+
++ Labels:
+    ++ Equations (eq:):
+
+    ++ Figures (fig:):
+
+	++ Tables (tab:):

@@ -1,0 +1,12 @@
++ Arguments:
+    ++
+
++ Labels:
+    ++ Equations (eq:):
+		L06_PAF		=	Photon Amplitude Factor
+		L06_EPMAME	=	Electron-Positron Muon-Antimuon Matrix Element
+
+    ++ Figures (fig:):
+		L06_FDEPA	=	Feynamn Diagram Electron Positron Annihilation (Tikz)
+
+	++ Tables (tab:):
