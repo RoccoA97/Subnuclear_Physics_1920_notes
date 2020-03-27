@@ -11,29 +11,33 @@
 
 \begin{document}
 
-\frontmatter
-\input{../frontespizio/frontespizio.tex}
+	\frontmatter
+	\newgeometry{inner=20mm, outer=20mm, top=20mm, bottom=20mm, marginparsep=6mm, marginparwidth=30mm}
+	\pagecolor{green!10}
+	\input{../frontespizio/frontespizio.tex}
+	\pagecolor{white}
+	\newgeometry{inner=20mm, outer=49mm, top=20mm, bottom=25mm, marginparsep=6mm, marginparwidth=30mm}
 
 
-\tableofcontents
+	\tableofcontents
 
 
-\mainmatter
-\pagestyle{fancy}
+	\mainmatter
+	\pagestyle{fancy}
 
 
-\subfile{../lessons/01/01.tex}
-\subfile{../lessons/02/02.tex}
-\subfile{../lessons/03/03.tex}
-\subfile{../lessons/04/04.tex}
-\subfile{../lessons/05/05.tex}
-\subfile{../lessons/06/06.tex}
+	\subfile{../lessons/01/01.tex}
+	\subfile{../lessons/02/02.tex}
+	\subfile{../lessons/03/03.tex}
+	\subfile{../lessons/04/04.tex}
+	\subfile{../lessons/05/05.tex}
+	\subfile{../lessons/06/06.tex}
 
 
-\backmatter
-\pagestyle{plain}
+	\backmatter
+	\pagestyle{plain}
 
 
-\input{../bibliography/bibliography.tex}
+	\input{../bibliography/bibliography.tex}
 
 \end{document}
