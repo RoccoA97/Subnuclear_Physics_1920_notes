@@ -74,7 +74,7 @@ In scattering experiments, the basic measureable quantity is called the \textbf{
 The basic observable quantity associated with a decaying particle is the \textbf{rate of decay}. In quantum mechanics, an unstable particle \( A \) decays with the same probability in each unit of time. The probability of survival to time \( t \) then obeys the differential equation:
 \begin{equation}
     \dv{P(t)}{t} = - \frac{P}{\tau_A}
-    \overset{\small \text{solution}}{\Longrightarrow}
+    \overset{\text{solution}}{\Longrightarrow}
     P(t) = P_0 e^{-\frac{t}{\tau_A}}
     \label{eq:L03_PST}
 \end{equation}
@@ -143,7 +143,7 @@ The partial width and the cross section for a certain process can be calculated 
     \bra{1,2,\dots,n} T \ket{A(p_A)}
     =
     \underbrace{\mathcal{M}(A \longrightarrow 1,2,\dots,n)}_{\text{Invariant matrix element}} \qty(2\pi)^4 \underbrace{\delta^{(4)} \qty(p_A - \sum_{i=1}^{n} p_i )}_{E, \va{p} \ \text{conservation}}
-    \label{eq:}
+    \label{eq:L03_TEO}
 \end{equation}
 It is useful to work out the dimension of \( \mathcal{M} \). The operator \( T \) is dimensionless, and the states have total dimension \( \si{GeV^{-(n+1)}} \). The delta function has units \( \si{GeV^{-4}} \). Then the invariant matrix element has the units:
 \begin{equation}
@@ -196,7 +196,7 @@ We will procede with a couple of examples/exercises in order to understand the w
         \int \d{\Pi_2}
         =
         \int \frac{\d{^3 p_1}}{(2\pi)^3 2 E_1} \frac{\d{^3 p_2}}{(2\pi)^3 2 E_2} (2\pi)^4 \delta^{(4)} \qty(p - p_1 - p_2 )
-        \label{eq:}
+        \label{eq:L03_2PPSE}
     \end{equation}
 
     Let's work in the CM system, where \( \va{p}_1 + \va{p}_2 = 0 \) and so \( \va{p}_1 = - \va{p}_2 \). Hence:

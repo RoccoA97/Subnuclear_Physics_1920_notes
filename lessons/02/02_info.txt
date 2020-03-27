@@ -12,6 +12,7 @@
         L02_HASOT   =   Hydrogen Atom Spin Orbit Trick
         L02_HASOOM  =   Hydrogen Atom Spin Orbit Order Magnitude
         L02_HASSHC  =   Hydrogen Atom Spin Spin Hamiltonian Correction
+		L02_HATS	=	Hydrogen Atom Total Spin
         L02_PRM     =   Positronium Reduced Mass
         L02_PCCE    =   Positronium Charge Conjugation Eigenvalues
         L02_MPCC    =   Multi Photon Charge Conjugation
