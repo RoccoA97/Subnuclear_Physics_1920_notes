@@ -1,0 +1,15 @@
++ Arguments:
+    ++
+
++ Labels:
+    ++ Equations (eq:):
+		L07_HPDCS	=	Hadron Production Differential Cross Section
+		L07_HPCS	=	Hadron Production Cross Section
+		L07_HPR		=	Hadron Production Ratio
+		L07_DISEP	=	Deep Inelastic Scattering Electron Proton
+
+    ++ Figures (fig:):
+		L07_HPR		=	Hadronic and Muon Resonances
+		L07_SLDE	=	SLD Experiment
+
+	++ Tables (tab:):
