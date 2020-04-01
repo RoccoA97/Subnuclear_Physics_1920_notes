@@ -1,0 +1,16 @@
++ Arguments:
+	++
+
++ Labels:
+	++ Equations (eq:):
+		L08_EQSME	=	Electron Quark Scattering Matrix Element
+		L08_	=
+		L08_	=
+		L08_	=
+
+	++ Figures (fig:):
+		L08_EQSFD	=	Electron Quark Scattering Feynman Diagram
+		L08_EQSCSFD	=	Electron Quark Scattering Crossing Symmetry Feynman Diagram
+
+
+	++ Tables (tab:):

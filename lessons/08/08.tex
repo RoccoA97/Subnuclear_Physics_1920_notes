@@ -1,0 +1,142 @@
+\providecommand{\main}{../../main}
+\providecommand{\figpath}[1]{\main/../lessons/#1}
+\documentclass[../../main/main.tex]{subfiles}
+
+\newdate{date}{01}{04}{2020}
+
+
+\begin{document}
+
+\marginpar{ \textbf{Lecture 8.} \\  \displaydate{date}. \\ Compiled:  \today.}
+
+\section{Crossing symmetry}
+To compute the cross section, we need to evaluate the matrix elements for electron-quark scattering, which can be described by the Feynman diagram in Figure \ref{fig:L08_EQSFD}.
+%TODO Feynman diagram e-q scattering
+
+This diagram is similar to the one for \( e^-e^+ \longrightarrow \mu^-\mu^+ \), so the matrix element will have the same structure:
+\begin{equation}
+	\mathcal{M}(e^-q_f \rightarrow e^-q_f)
+	=
+	(-e) \bra{e^-} j^\mu \ket{e^-} \frac{1}{q^2} (Q_f e) \bra{q_f} j_\mu \ket{q_f}
+	\label{eq:L08_EQSME}
+\end{equation}
+To evaluate this matrix element, we need the concept of \textbf{crossing symmetry}, applyed in a phenomenological way. To begin, we compare thee diagram in Figure \ref{fig:L08_EQSFD} with the following one for \( e^+e^- \longrightarrow q\bar{q} \) in Figure \ref{fig:L08_EQSCSFD}.
+%TODO Feynman diagram
+
+%TODO
+\begin{equation}
+	\sum_{\text{spin}} \abs{\mathcal{M}_\mathrm{scat}}^2
+	\longrightarrow
+	\sum_{\text{spin}} \abs{\mathcal{M}_\mathrm{pair}}^2
+	\label{eq:}
+\end{equation}
+
+The two Feynamn diagrams actually show the same process, laid out in different ways in space-time. The situations with a final quark and an initial antiquark are strongly related, because the same quantum field that creates the electron destroys the positron, and similarly for a quark and antiquark. So, the matrix elements have the same functional form with appropriate identification of the external momenta.
+
+Crossing symmetry is a theorem from QFT and it states that processes related by this kind of symmetry are described by the same function of external momenta. It is useful to continue to introduce a rigorous and standard notation for the kinematic invariants of 2-body scattering process. So, we want to study:
+\begin{equation}
+	1(p_1) + 2(p_2)
+	\longrightarrow
+	3(p_3) + 4(p_4)
+	\label{eq:}
+\end{equation}
+The Mandelstam invariants reads (with \( p_1, p_2 < 0 \)):
+\begin{subequations}
+	\begin{align}
+		s &= (p_1 + p_2)^2 = (p_3 + p_4)^2	\\
+		t &= (p_1 + p_3)^2 = (p_2 + p_4)^2	\\
+		u &= (p_1 + p_4)^2 = (p_2 + p_3)^2
+	\end{align}
+	\label{eq:L08_MI}
+\end{subequations}
+where:
+\begin{equation}
+	s + t + u
+	=
+	m_1^2 + m_2^2 + m_3^2 + m_4^2
+	\label{eq:}
+\end{equation}
+Kinematics:
+\begin{subequations}
+	\begin{align}
+		p_1 &= (-E, 0, 0, -E)	\\
+		p_2 &= (-E, 0, 0,  E)	\\
+		p_3 &= (E, E\sin \theta, 0, E\cos \theta)	\\
+		p_4 &= (E, -E\sin \theta, 0, -E\cos \theta)
+	\end{align}
+	\label{}
+\end{subequations}
+and:
+\begin{equation}
+	s = (2E)^2 = E^2_\mathrm{CM}
+	\label{eq:}
+\end{equation}
+
+In the last chapter, we stated that we could represent an intermediate state in a Feynman diagram with a Breit-Wigner denominator:
+\begin{equation}
+	\frac{1}{(p_1+p_2)^2 - m^2_R + im_R\Gamma_R}
+	\label{eq:}
+\end{equation}
+When the intermediate state separates the initial and the final state, the denominator depends on \( (p_1 + p_2)^2 = s \):
+\begin{equation}
+	\frac{1}{s - m^2_R + im_R\Gamma_R}
+	\label{eq:}
+\end{equation}
+This type of reation is called an \textbf{\( s \)-channel process}. If the amplitude depends on \( t \), we have a \textbf{\( t \)-channel process}, if it depends on \( u \), we have an \textbf{\( u \)-channel process}.
+%TODO add diagrams
+%TODO add equations with diagrams for every channel
+
+
+
+
+
+\section{Cross section for electron-quark scattering}
+We get:
+\begin{align}
+	\abs{\mathcal{M}(e^-_R e^+_L \rightarrow q_R \bar{q}_L)}^2
+	&=
+	\abs{\mathcal{M}(e^-_L e^+_R \rightarrow q_L \bar{q}_R)}^2
+	=
+	4 Q^2_f e^4 \frac{u^2}{s^2}
+	\\
+	\abs{\mathcal{M}(e^-_R e^+_L \rightarrow q_L \bar{q}_R)}^2
+	&=
+	\abs{\mathcal{M}(e^-_L e^+_R \rightarrow q_R \bar{q}_L)}^2
+	=
+	4 Q^2_f e^4 \frac{t^2}{s^2}
+\end{align}
+These expressions are correct in any frame and they yield the expressions for the crossed amplitudes after an appropriate permutation of variables. For example, consider the crossing symmetry;
+%TODO add Feynamn diagrams
+
+The \( eq \) scattering diagram on the right is obtained by moving the final antiquark \( \bar{q}_L \) to the initial state, where it becomes the quark \( q_R \), and moving the initial positron \( e^+_L \) to the final state, where it becomes the electron \( e^-_R \). Note that helicity is conserved. The interchange of momenta is:
+\begin{equation}
+	\begin{gathered}
+		p_1 \longrightarrow p_1	\\
+		p_2 \longrightarrow p_3	\\
+		p_3 \longrightarrow p_4	\\
+		p_4 \longrightarrow p_2
+	\end{gathered}
+	\label{eq:}
+\end{equation}
+
+If we do this exchange, the matrix element for \( e^-_Rq_R \longrightarrow e^-_Rq_R \) is given by:
+\begin{equation}
+	\abs{\mathcal{M}(e^-_Rq_R \rightarrow e^-_Rq_R)}^2
+	=
+	4 Q^2_f e^4 \frac{s^2}{t^2}
+	\label{eq:}
+\end{equation}
+Similarly:
+\begin{equation}
+	\abs{\mathcal{M}(e^-_Rq_L \rightarrow e^-_Rq_L)}^2
+	=
+	4 Q^2_f e^4 \frac{u^2}{t^2}
+	\label{eq:}
+\end{equation}
+
+There are amplitudes that do not contribute to the final state since the related processes violate helicity conservation. So, backward scattering is forbidden.
+
+
+
+
+\end{document}
