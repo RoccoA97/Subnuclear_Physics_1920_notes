@@ -6,6 +6,7 @@
 		L05_EMSNOP	=	E M Shower Number Of Particles
 		L05_EMSME	=	E M Shower Maximum Expansion
 		L05_EMSMR	=	E M Shower Molière Radius
+		L05_NIL		=	Nuclear Interaction Length
 		L05_CSQF	=	Calorimeter Signal Quantum Fluctuations
 		L05_CSLF	=	Calorimeter Shower Leakage Fluctuations
 		L05_CIEF	=	Calorimeter Instrumental Effects Fluctuations
