@@ -1,0 +1,36 @@
+\providecommand{\main}{../../main}
+\providecommand{\figpath}[1]{\main/../lessons/#1}
+\documentclass[../../main/main.tex]{subfiles}
+
+\newdate{date}{20}{05}{2020}
+
+
+\begin{document}
+
+\marginpar{ \textbf{Lecture 21.} \\  \displaydate{date}. \\ Compiled:  \today.}
+
+%TODO manca la parte precedente
+
+The decay is shifted forward in time for an \( \bar{B}^0 \) and backward in time for an initial \( B^0 \). The asymmetry is predicted to have a time-dependence governed by \( \delta m \) with amplitude \( \sin 2\beta \). For the process \( B^0/\bar{B}^0 \rightarrow J/\psi K^0_L \), the relative minus sign in the decay amplitudes from \( B^0 \) and \( \bar{B}^0 \) becomes a plus sign and so the asymmetry takes the minus sign. The angle \( \beta \) is the phase angle taken directly from CKM matrix, without corrections due to strong interaction.
+
+The first thing to do in order to understand the time-dependent asymmetry is to find a way to produce a sufficient quantity of \( B^0 \) and \( \bar{B}^0 \) mesons. This can be done \( e^+e^- \) annihilation, which leads to a state with \( J=1 \). This means that for the production of spin 0 mesons, the two mesons are in an \( L=1 \) wavefunction, antisymmetric in the other meson quantum numbers. In particular, the \( B \) mesons go outward from the production point and, after some time, one of the mesons decays. If it decays to an \( e^+ \) or a \( \mu^+ \), this event tags this meson (at this time) as a \( B^0 \). The other meson must then be a \( \bar{B}^0 \). This state propagates for an additional time \( \Delta t \), possibly mixing to \( B^0 \) during that time, and then decays to the observed final state. Note that the relative time \( \Delta t \) might be negative if the leptonic decay takes place after the selected exclusive decay.
+
+%TODO (19.61) p.304
+%TODO Fig. 19.4
+
+The lifetime of the \( B \) meson is about \( 1.5 \ \si{ps} \), so it is difficult to measure the decay time directly. A possibility is to construct an asymmetric colliding beam accelerator, in which the \( e^+e^- \) center of mass frame is moving with respect to the lab. The boost of the center of mass is approximately \( v/c \sim 0.5 \). Therefore, two \( B \) decays would be separeted by about \( 200 \ \si{\mu m} \), which is a resolvable distance for a silicon tracking detector which pinpoints the decay vertices.
+
+In the late 1990's, two asymmetric \( e^+e^- \) colliders were constructed, one at SLAC (\( 9.0 \ \si{GeV} \ e^- \ \times 3.1 \ \si{GeV} \ e^+ \)), for the BaBar experiment, and one at KEK in Tsukuba, Japan (\( 8.0 \ \si{GeV} \ e^- \ \times 3.5 \ \si{GeV} \ e^+ \)), for BELLE experiment. In 2001, both experiments observed the \( CP \)-violating asymmetry in \( B^0 \rightarrow J/\psi K^0_S \).
+
+% TODO BELLE2
+
+In Figure \ref{fig:L20_BABAR} it is presented the displacements of the decay distributions for \( B^0 \rightarrow J/\psi K^0 \) and \( \bar{B}^0 \rightarrow J/\psi K^0 \) measured by the BaBar experiment. The distributions are labelled by the tagging \( B \) meson, so the points labeled ``\( B^0 \) tags'' indicate \( \bar{B}^0(\tau) \) decays, and vice versa. The distributions for \( B^0 \) and \( \bar{B}^0 \) are shifted substantially with respect to one another, in just the directions predicted below. The shifts are in the opposite directions for \( K^0_L \) instead of \( K^0_S \) in the final state. The current best value of \( \beta \) from this measurement is:
+\begin{equation}
+	\sin 2\beta
+	=
+	0.679 \pm 0.20
+	\label{eq:}
+\end{equation}
+that is, \( \beta = 21\text{°} \). This is indeed a large \( CP \)-violating effect.
+
+\end{document}

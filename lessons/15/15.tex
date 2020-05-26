@@ -1,0 +1,101 @@
+\providecommand{\main}{../../main}
+\providecommand{\figpath}[1]{\main/../lessons/#1}
+\documentclass[../../main/main.tex]{subfiles}
+
+\newdate{date}{29}{04}{2020}
+
+
+\begin{document}
+
+\marginpar{ \textbf{Lecture 15.} \\  \displaydate{date}. \\ Compiled:  \today.}
+
+\section{Experimental tests of electroweak interaction}
+
+\subsection{Discovery of the neutral current}
+%https://home.cern/news/news/physics/forty-years-neutral-currents
+The discovery of neutral currents lies in the development of the electroweak theory. The theory proposed by Sheldon Glashow, Steven Weinberg, and Abdus Salam in the 1960s tried to unify electromagnetic and weak interaction between elementary particles. Their theory predicted the existence of the \( W^{\pm} \) and \( Z^0 \) bosons as propagators of the weak force. Exchange of a \( Z^0 \) boson transfers momentum, spin, and energy but leaves the particle's quantum numbers unaffected. Since there is no transfer of electric charge, the exchange of a \( Z^0 \) is referred to as ``neutral current''. So, neutral currents were a prediction of the electroweak theory.
+
+Their discovery takes place in the experiment Gargamelle. It was a bubble chamber at CERN designed to detect neutrinos. It was 4.8 metres long and 2 metres in diameter, weighed 1000 tonnes. It held nearly 12 cubic metres of heavy-liquid freon (CF3Br) and not the usual liquid hydrogen. The discovery involved the search for two types of events:
+\begin{itemize}
+	\item one involved the interaction of a neutrino with an electron in the liquid:
+		\begin{align}
+			\nu + e^- &\longrightarrow \nu + e^-	\\
+			\overset{-}{\nu} + e^- &\longrightarrow \overset{-}{\nu} + e^-
+		\end{align}
+	\item in the other the neutrino scattered from a hadron (proton or neutron), for example:
+		\begin{align}
+			\nu + p &\longrightarrow \nu + p	\\
+			\nu + n &\longrightarrow \nu + p + \pi^-	\\
+			\nu + p &\longrightarrow \nu + n + \pi^+
+		\end{align}
+\end{itemize}
+In the latter case, the signature of a neutral current event was an isolated vertex from which only hadrons were produced. So, we can have neutral current or charged current events:
+\begin{align}
+	\text{NC:} \ \nu/\bar{\nu} + N &\longrightarrow \nu/\bar{\nu} + \text{hadrons}	\\
+	\text{CC:} \ \nu/\bar{\nu} + N &\longrightarrow \mu^-/\mu^+ + \text{hadrons}
+\end{align}
+which are distinguished respectively by the absence of any possible muon, or the presence of one, and only one, possible muon.
+
+Concerning the experimental setup, neutrino/antineutrino beams were directed to Gargamelle. To bend the tracks of charged particles, Gargamelle was surrounded by a magnet providing a 2 Tesla field. The coils of the magnet was made of copper cooled down with water, and followed the oblong shape of Gargamelle. In order to maintain the liquid at an adequate temperature several water tubes surrounded the chamber body, to regulate the temperature. When recording an event, the chamber was illuminated and photographed. The illumination system emitted light that was scattered at 90° by the bubbles, and sent to the optics.
+
+By this way it was possible to measure the following cross sections of the processes listed previously:
+\begin{equation}
+	\frac{\d{^2\sigma}}{\d{x} \d{y}}(\overset{(-)}{\nu}N \rightarrow \mu^{(+)}X)
+	\label{eq:}
+\end{equation}
+The leptonic events have small cross-sections, but correspondingly small background. The hadronic events have larger backgrounds, most extensively due to neutrons produced when neutrinos interact in the material around the chamber. Neutrons, being of no charge, would not be detected in the bubble chamber, and the detection of their interactions would mimic neutral currents events. In order to reduce the neutron background, the energy of the hadronic events had to be greater than \( 1 \ \si{GeV} \).
+
+So, the quantity we have to measure is the ratio between NC and CC events:
+\begin{equation}
+	R^{\nu}
+	=
+	\frac{\sigma(\nu, \text{nc})}{\sigma(\nu, \text{cc})}
+	\qquad
+	R^{\overline{\nu}}
+	=
+	\frac{\sigma(\overline{\nu}, \text{nc})}{\sigma(\overline{\nu}, \text{cc})}
+	\label{eq:}
+\end{equation}
+Moreover, an interesting result comes out if we compute the ratio of the different cross sections:
+\begin{equation}
+	r
+	=
+	\frac{\sigma(\overline{\nu}, -\text{cc})}{\sigma(\nu, \text{cc})}
+	\label{eq:}
+\end{equation}
+In fact, it is not not equal to 1. This is due to the fact that the target is made of matter and so we don't have a symmetric situation.
+
+By July 1973, the collaboration of the experiment had confirmed as many as 166 hadronic events, and one electron event. In both cases, the neutrino enters invisibly, interacts and then moves on, again invisibly. On 3 September the collaboration published two papers on these events in the same issue of Physics Letters. In its short career at the SPS, Gargamelle succeeded in observing for the first time a touchstone weak interaction, involving only leptons, in which a muon-type neutrino hits an electron, producing an electron-neutrino and a muon. However in 1979 the chamber ceased operation after cracks had appeared that proved impossible to repair.
+
+
+
+\subsection{Discovery of \( W^{\pm} \) and \( Z^0 \) bosons}
+%https://cds.cern.ch/record/2103277/files/9789814644150_0006.pdf
+The discovery of the \( W^{\pm} \) and \( Z^0 \) bosons themselves had to wait for the construction of a particle accelerator powerful enough to produce them. The first such machine that became available was the Super Proton Synchrotron, where unambiguous signals of \( W \) bosons were seen in January 1983 during a series of experiments made possible by Carlo Rubbia and Simon van der Meer. The actual experiments were called UA1 (led by Rubbia) and UA2 (led by Pierre Darriulat), and were the collaborative effort of many people.
+
+
+
+\subsection{Measurements of \( W^{\pm} \) properties}
+
+
+
+\subsection{Measurements of \( Z^0 \) properties}
+
+
+
+\subsection{Determination of the Weinberg angle}
+%Not in programme
+
+
+
+\subsection{Measurement of \( A_\mathrm{BF} \)}
+%Not in programme
+
+
+
+\subsection{Global fit of SM measurements}
+%Not in programme
+
+
+
+\end{document}

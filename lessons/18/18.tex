@@ -1,0 +1,80 @@
+\providecommand{\main}{../../main}
+\providecommand{\figpath}[1]{\main/../lessons/#1}
+\documentclass[../../main/main.tex]{subfiles}
+
+\newdate{date}{12}{05}{2020}
+
+
+\begin{document}
+
+\marginpar{ \textbf{Lecture 18.} \\  \displaydate{date}. \\ Compiled:  \today.}
+
+\section{Cabibbo Theory and CKM matrix}
+% p.284
+Particle masses and quark mixing have the same origin in the Standard Model. In the Electroweak theory, particles are classified in left-handed doublets. The Higgs field \( \varphi \) was introduced to explain why fermions and bosons have masses different from zero.
+\begin{equation}
+	\Delta \mathcal{L}
+	=
+	- y_e^{ij} L_a^{+i} \varphi_Q e^{J}_r - y_{\alpha}^{ij} Q^{+i}_Q \varphi_a d^{J}_R - y_{u}^{ij} Q^{+}_{Q} \varepsilon \varphi^*_b u{J}_R + \text{h.c.}
+	\label{eq:}
+\end{equation}
+where \( y_f \) are the Yukawa couplings and:
+\begin{equation}
+	L =
+	\begin{pmatrix}
+		\nu_L \\
+		e_L
+	\end{pmatrix}
+	\qquad
+	Q =
+	\begin{pmatrix}
+		u_L \\
+		d_L
+	\end{pmatrix}
+	\label{eq:}
+\end{equation}
+If we replace the Higgs field by its vacuum expectation value
+\begin{equation}
+	\varphi \longrightarrow
+	\begin{pmatrix}
+		Q \\
+		\frac{v}{\sqrt{2}}
+	\end{pmatrix}
+	\label{eq:}
+\end{equation}
+the Lagrangian gives:
+\begin{equation}
+	\Delta \mathcal{L}
+	=
+	- \frac{y_e v}{\sqrt{2}} e^\dag_L e_R
+	- \frac{y_d v}{\sqrt{2}} d^\dag_L d_R
+	- \frac{y_u v}{\sqrt{2}} u^\dag_L u_R
+	+ \text{h.c.}
+	\label{eq:}
+\end{equation}
+Comparing this equation, we see that it has just the structure of mass terms for the \( e \), \( d \), and \( u \). Then:
+\begin{equation}
+	m_f
+	=
+	y_f \frac{v}{\sqrt{2}}
+	\label{eq:}
+\end{equation}
+for all the three species. This is what we want to measure.
+
+The fermion status couples also to the mediators, \( \gamma \), \( Z^0 \), \( W^{\pm} \). In order to describe fermions-mediators interaction, we need to diagonalize the couplings for the fermions, \( y^{ij}_f \). In the case of leptons, the change in the Lagrangian is something like:
+\begin{equation}
+	\Delta \mathcal{L}
+	\sim
+	e^\dag_R (i\sigma D) e_R
+	\label{eq:}
+\end{equation}
+Leptons interact only with the same generation. This has as outcome the lepton number conservation.
+
+For quarks, for \( Z^0 \), \( \gamma \): the \( \Delta \mathcal{L} \) ss similar of the lepton one.
+For \( W^{\pm} \) %TODO
+
+Interactions with \( W^{\pm} \) can happen with different generations.
+
+\( V_\mathrm{CKM} \) elements have to be evaluated.
+
+\end{document}
