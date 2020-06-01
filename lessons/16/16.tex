@@ -82,19 +82,84 @@ The result of this procedure is that the number of neutrino families is:
 
 
 
-\subsection{Determination of the Weinberg angle}
-%Not in programme
-
-
-
 \subsection{Measurement of \( A_\mathrm{BF} \)}
 %Not in programme
+Another quantity that can be measured in \( e^+e^- \) annihilation process is the Forward-Backward Asymmetry. Its definition is:
+\begin{equation}
+	A_{\mathrm{FB}}
+	=
+	\frac{N_{\mathrm{F}} - N_{\mathrm{B}}}{N_{\mathrm{F}} + N_{\mathrm{B}}}
+	\label{eq:}
+\end{equation}
+where \( N_{\mathrm{F}} \) is the number of events with forward production of particles and \( N_{\mathrm{B}} \) is the number of events with backward production. More precisely, the products of the \( e^+e^- \) collisions are emitted at an angle \( \theta \) with respect to the beam axis. If \( \cos\theta \) is greater than zero, this is a ``forward event'', otherwise it is a ``backward event''.
+
+What we can do is to measure \( N_{\mathrm{F}} \) and \( N_{\mathrm{B}} \) for different final states (\( f\bar{f} \): \( \mu^+\mu^- \), \( \tau^+\tau^- \), \( b\bar{b} \), \( c\bar{c} \), \( \dots \)) and for different center of mass energies.
+An example of the experimental results for \( b\bar{b} \) and \( c\bar{c} \) products is showed in Figure \ref{fig:L16_FBABC}.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{\figpath{16}/16_images/FBABC.png}
+	\caption{\label{fig:L16_FBABC} Forward-Backward Asymmetry for \( b\bar{b} \) (in red) and \( c\bar{c} \) (in green) depending on the center of mass energy \( \sqrt{s} \).}
+\end{figure}
+
+Concerning the width, we have the following dependence:
+\begin{equation}
+	\Gamma(Z^0 \rightarrow f\bar{f})
+	\approx
+	\frac{g^2}{\cos^2\theta_W} m_Z (I_3 - Q \sin^2\theta_W)
+	\label{eq:}
+\end{equation}
+So the asymmetry is due to a different way of producing the leptons or the hadrons in the final state, related to the isospin of the final state and to the \( \cos \) and \( \sin \) of the Weinberg angle.
+
+Forward-Backward Asymmetry has been measured in several decay channels in order to obtain sufficient data to get the Weinberg angle. Among these, the decay into \( b\bar{b} \) is particularly important for New Physics searches.
 
 
 
-\subsection{Global fit of SM measurements}
+\subsection{Determination of the Weinberg angle}
 %Not in programme
+The measurement of the Weinberg angle was performed by the collaboration of several experiments, in particular LEP and the Stanford Linear Accelerator Center (SLAC).
 
+The Stanford Linear Collider (SLC) was a linear accelerator that collided electrons and positrons at SLAC. The center of mass energy was about \( \sqrt{s} = 90 \ \si{GeV} \), equal to the mass of the \( Z \) boson, which the accelerator was designed to study. Although largely overshadowed by the Large Electron–Positron Collider at CERN, which began running in 1989, the highly polarized electron beam at SLC (close to 80\%) made certain unique measurements possible, such as parity violation in \( Z \) Boson-\( b \) quark coupling. The structure of the facility is showed in Figure \ref{fig:L16_SLCS}.
 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{\figpath{16}/16_images/SLCS.png}
+	\caption{\label{fig:L16_SLCS} Structure of the SLC experiment.}
+\end{figure}
+
+At the SLC, the asymmetry \( A_e \) was measured as an asymmetry in the total rate of \( Z \) production from \( e^+e^- \). In a circular accelerator, electron beam polarization is typically destroyed as the beams carry out many circuits of the ring. However, linear acceleration naturally preserves the electron polarization. The experiments at SLAC took advantage of this. Using polarized laser light, electrons were produced with preferential left- or right-handed polarization at the front of the accelerator, transported over \( 4 \ \si{km} \) to the collider interaction point, and then annihilated with positrons to create \( Z \) bosons. The correlation of the laser polarization with the rate for \( Z \) production allowed a measurement of the asymmetry in which almost all systematic errors cancelled. The experiment measured:
+\begin{equation}
+	A_e
+	=
+	0.1516 \pm 0.0021
+	\label{eq:}
+\end{equation}
+It is interesting that:
+\begin{equation}
+	A_e
+	\frac{\qty(\frac{1}{2} -s^2_w)^2 - s^2_w}{\qty(\frac{1}{2} -s^2_w)^2 + s^2_w}
+	=
+	\frac{\frac{1}{4} - s^2_w}{2s^4_w + \qty(\frac{1}{4} - s^2_w)}
+	\approx
+	8 \qty(\frac{1}{4} - s^2_w)
+	\label{eq:}
+\end{equation}
+where \( s_w \) is the sine of the Weinberg angle. Sincce the actual value of \( s^2_w \) is close to \( \frac{1}{4} \), this very accurate value of \( A_e \) turns into an even more accurate value of \( s^2_w \):
+\begin{equation}
+	s^2_w
+	=
+	0.23109 \pm 0.00026
+	\label{eq:}
+\end{equation}
+For \( b \) quarks, the polarization asymmetry is expected to be almost maximal. This prediction could be tested at the SLC by using the polarized \( e^- \) beam to produce events with \( b \) quarks in the final state. Recall that the angular distributions in polarized \( e^+e^- \) annihilation depend on the fermion polarizations:
+\begin{align}
+	\dv{\sigma}{\cos\theta}(e^-_Le^+_R \rightarrow b_L\bar{b}_R)
+	&\sim
+	(1 + \cos\theta)^2
+	\\
+	\dv{\sigma}{\cos\theta}(e^-_Re^+_L \rightarrow b_L\bar{b}_R)
+	&\sim
+	(1 - \cos\theta)^2
+\end{align}
 
 \end{document}
